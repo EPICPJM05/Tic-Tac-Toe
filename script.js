@@ -67,7 +67,7 @@ function  putMark(a){
     moveCount++;
 
     //
-    if(moveCount>8){
+    if(moveCount>9){
         setTimeout(() => {
             alert('Game Over');
         }, 1000);
@@ -103,4 +103,3 @@ function winSituation(){
     }
     return p;
 }
-
