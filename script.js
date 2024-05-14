@@ -88,6 +88,7 @@ function winSituation(){
     var co4= p1pos.includes(2)&&p1pos.includes(5)&&p1pos.includes(8);
     var co5= p1pos.includes(3)&&p1pos.includes(5)&&p1pos.includes(7);
     var co6= p1pos.includes(3)&&p1pos.includes(6)&&p1pos.includes(9);
+    var co7= p1pos.includes(4)&&p1pos.includes(5)&&p1pos.includes(6);
 
     var c1= p2pos.includes(1)&&p2pos.includes(2)&&p2pos.includes(3);
     var c2= p2pos.includes(1)&&p2pos.includes(4)&&p2pos.includes(7);
@@ -95,10 +96,12 @@ function winSituation(){
     var c4= p2pos.includes(2)&&p2pos.includes(5)&&p2pos.includes(8);
     var c5= p2pos.includes(3)&&p2pos.includes(5)&&p2pos.includes(7);
     var c6= p2pos.includes(3)&&p2pos.includes(6)&&p2pos.includes(9);
+    var c7= p2pos.includes(4)&&p2pos.includes(5)&&p2pos.includes(6);
 
-    if(co1||co2||co3||co4||co5||co6){
+    
+    if(co1||co2||co3||co4||co5||co6||co7){
         p = p1.value;
-    }else if(c1||c2||c3||c4||c5||c6){
+    }else if(c1||c2||c3||c4||c5||c6||c7){
         p = p2.value;
     }
     return p;
