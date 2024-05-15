@@ -7,6 +7,9 @@ function getRandomTurn() {
     if (p1.value == "" || p2.value == "") {
         alert("Fill Names in the given field");
     } else {
+        document.getElementById("strt-btn").style.display='none';
+        p1.style.display='none';
+        p2.style.display='none';
         var mark = parseInt(Math.random() * 50);
         console.log(mark);
         if (mark % 2 == 0) {

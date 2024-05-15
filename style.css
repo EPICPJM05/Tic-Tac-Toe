@@ -7,12 +7,19 @@
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
-
+}
+.game-btn>button{
+    width: 300px;
+}
+.game-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .place{
     font-size: 65px;
-    font-family: cursive !important;
+    font-family: cursive;
     font-weight: bolder;
     color: white;
     display: flex;
@@ -83,7 +90,7 @@ form{
 form input,button{
     width: 70vw;
     padding: 10px;
-    margin: 10px;
+    margin: 3px;
 }
 
 #msg{

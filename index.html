@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="top">
-        <img src="https://cdn.hugeicons.com/icons/cancel-01-stroke-rounded.svg" alt="cancel-01" width="25" height="25" class="x"/>
-        <img src="https://cdn.hugeicons.com/icons/circle-stroke-rounded.svg" alt="circle" width="25" height="25" class="o"/>
+        <img src="https://cdn.hugeicons.com/icons/cancel-01-stroke-rounded.svg" alt="cancel-01" width="25" height="25"
+            class="x" />
+        <img src="https://cdn.hugeicons.com/icons/circle-stroke-rounded.svg" alt="circle" width="25" height="25"
+            class="o" />
         <h1>Tic Tac Toe Game</h1>
         <p id="msg"></p>
     </div>
     <form>
         <input type="text" placeholder="Player1 Name" name="P1name" id="P1name">
         <input type="text" placeholder="Player2 Name" name="P2name" id="P2name">
-        <button type="button" onclick="getRandomTurn();">START</button>
-        <button type="submit">RESET</button>
+        <button type="button" onclick="getRandomTurn();" id="strt-btn">START</button>
     </form>
     <p id="plStatus"></p>
     <main class="board" id="board">
@@ -30,9 +33,13 @@
         <div class="place" id="pos7" onclick="putMark(7)"></div>
         <div class="place" id="pos8" onclick="putMark(8)"></div>
         <div class="place" id="pos9" onclick="putMark(9)"></div>
+        <form class="game-btn">
+            <button type="button" onclick="playAgain();">Once More...</button>
+            <button type="submit">RESET</button>
+        </form>
     </main>
-    <button onclick="playAgain();">Once More...</button>
 
     <script src="script.js"></script>
 </body>
+
 </html>
