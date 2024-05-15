@@ -113,7 +113,7 @@ function winSituation() {
 }
 
 function playAgain() {
-    //     const locked = []
+    // const locked = []
     // const p1pos = []
     // const p2pos = []
 
