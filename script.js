@@ -68,14 +68,14 @@ function putMark(a) {
         moveCount++;
 
         //
-        if (moveCount >= 9) {
-            setTimeout(() => {
-                alert('Game Over');
-            }, 1000);
-        } else if (winSituation()) {
+        if (winSituation()) {
             setTimeout(() => {
                 alert(winner + " wins !!!");
             }, 300);
+        } else if (moveCount >= 9) {
+            setTimeout(() => {
+                alert("It's a Draw !!");
+            }, 1000);
         }
     } else {
         status.innerText = "Congratulations " + winner + ", you are the Winner!";
@@ -86,25 +86,29 @@ var winner;
 function winSituation() {
     //add conditions
 
+    //P1 winning
     var co1 = p1pos.includes(1) && p1pos.includes(2) && p1pos.includes(3);
     var co2 = p1pos.includes(1) && p1pos.includes(4) && p1pos.includes(7);
     var co3 = p1pos.includes(1) && p1pos.includes(5) && p1pos.includes(9);
     var co4 = p1pos.includes(2) && p1pos.includes(5) && p1pos.includes(8);
     var co5 = p1pos.includes(3) && p1pos.includes(5) && p1pos.includes(7);
     var co6 = p1pos.includes(3) && p1pos.includes(6) && p1pos.includes(9);
+    var co7 = p1pos.includes(4) && p1pos.includes(5) && p1pos.includes(6);
 
+    //P2 winning
     var c1 = p2pos.includes(1) && p2pos.includes(2) && p2pos.includes(3);
     var c2 = p2pos.includes(1) && p2pos.includes(4) && p2pos.includes(7);
     var c3 = p2pos.includes(1) && p2pos.includes(5) && p2pos.includes(9);
     var c4 = p2pos.includes(2) && p2pos.includes(5) && p2pos.includes(8);
     var c5 = p2pos.includes(3) && p2pos.includes(5) && p2pos.includes(7);
     var c6 = p2pos.includes(3) && p2pos.includes(6) && p2pos.includes(9);
+    var c7 = p2pos.includes(4) && p2pos.includes(5) && p2pos.includes(6);
 
-    if (co1 || co2 || co3 || co4 || co5 || co6) {
+    if (co1 || co2 || co3 || co4 || co5 || co6 || co7) {
         p = p1.value;
         winner = p;
         return winner;
-    } else if (c1 || c2 || c3 || c4 || c5 || c6) {
+    } else if (c1 || c2 || c3 || c4 || c5 || c6 || c7) {
         p = p2.value;
         winner = p;
         return winner;
@@ -113,9 +117,6 @@ function winSituation() {
 }
 
 function playAgain() {
-    // const locked = []
-    // const p1pos = []
-    // const p2pos = []
 
     locked.length = 0;
     p1pos.length = 0;
