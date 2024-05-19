@@ -147,5 +147,5 @@ function scoreCard(){
     }
     console.log(p1.value + " score: "+ P1score);
     console.log(p2.value + " score: "+ P2score);
-    document.getElementById("score").innerText= p1.value + " score " + P1score + "\n" + p2.value + " score " + P2score;
+    document.getElementById("score").innerText= p1.value + " score: " + P1score + "\n" + p2.value + " score: " + P2score;
 }
