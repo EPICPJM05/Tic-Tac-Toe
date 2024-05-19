@@ -1,7 +1,9 @@
 var boardVisibility = document.getElementById('board').style.display = 'none';
-var P1mark, P2mark, msg;
+var P1mark, P2mark, msg , P1score=0, P2score=0;
 const p1 = document.getElementById("P1name");
 const p2 = document.getElementById("P2name");
+// Plyr1 = {mark, score};
+// Plyr2 = {mark, score};
 var first;
 function getRandomTurn() {
     if (p1.value == "" || p2.value == "") {
@@ -24,12 +26,11 @@ function getRandomTurn() {
             second = p1.value;
         }
         msg = p1.value + " got the mark: " + P1mark + "\n" + p2.value + " got the mark: " + P2mark;
-        console.log(msg)
+        console.log(msg);
         document.getElementById("msg").innerText = msg;
         document.getElementById("plStatus").innerText = first + "'s turn";
         boardVisibility = document.getElementById('board').style.display = 'grid';
-        p1.value = first;
-        p2.value = second;
+
     }
 }
 
@@ -43,8 +44,8 @@ var p;
 function putMark(a) {
     var status = document.getElementById("plStatus")
     if (winner == null) {
-        var stsP1 = p1.value + "'s turn";
-        var stsP2 = p2.value + "'s turn";
+        var stsP1 = first + "'s turn";
+        var stsP2 = second + "'s turn";
         if (moveCount % 2 == 0) {
             if (locked.includes(a)) {
                 alert("Already Filled")
@@ -110,12 +111,14 @@ function winSituation() {
     var c8 = p2pos.includes(7) && p2pos.includes(8) && p2pos.includes(9);
 
     if (co1 || co2 || co3 || co4 || co5 || co6 || co7 || co8) {
-        p = p1.value;
+        p = first;
         winner = p;
+        scoreCard();
         return winner;
     } else if (c1 || c2 || c3 || c4 || c5 || c6 || c7 || c8) {
-        p = p2.value;
+        p = second;
         winner = p;
+        scoreCard();
         return winner;
     }
     return false;
@@ -134,4 +137,15 @@ function playAgain() {
         document.getElementById("pos" + i).innerText = "";
     }
     getRandomTurn();
+}
+
+function scoreCard(){
+    if(winner == p1.value){
+        P1score++;
+    }else if(winner == p2.value){
+        P2score++;
+    }
+    console.log(p1.value + " score: "+ P1score);
+    console.log(p2.value + " score: "+ P2score);
+    document.getElementById("score").innerText= p1.value + " score " + P1score + "\n" + p2.value + " score " + P2score;
 }
