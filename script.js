@@ -1,4 +1,6 @@
 var boardVisibility = document.getElementById('board').style.display = 'none';
+document.getElementById('msg').style.display = 'none';
+document.getElementById('score').style.display = 'none';
 var P1mark, P2mark, msg , P1score=0, P2score=0;
 const p1 = document.getElementById("P1name");
 const p2 = document.getElementById("P2name");
@@ -10,6 +12,7 @@ function getRandomTurn() {
         alert("Fill Names in the given field");
     } else {
         document.getElementById("strt-btn").style.display='none';
+        document.getElementById("fun-msg").style.display='none';
         p1.style.display='none';
         p2.style.display='none';
         var mark = parseInt(Math.random() * 50);
@@ -30,7 +33,8 @@ function getRandomTurn() {
         document.getElementById("msg").innerText = msg;
         document.getElementById("plStatus").innerText = first + "'s turn";
         boardVisibility = document.getElementById('board').style.display = 'grid';
-
+        document.getElementById('score').style.display = '';
+        document.getElementById('msg').style.display = '';
     }
 }
 

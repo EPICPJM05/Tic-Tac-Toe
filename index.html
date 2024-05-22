@@ -10,15 +10,24 @@
 
 <body>
     <div class="top">
-        <img src="https://cdn.hugeicons.com/icons/cancel-01-stroke-rounded.svg" alt="cancel-01" width="25" height="25"
+        <!-- <img src="https://cdn.hugeicons.com/icons/cancel-01-stroke-rounded.svg" alt="cancel-01" width="25" height="25"
             class="x" />
         <img src="https://cdn.hugeicons.com/icons/circle-stroke-rounded.svg" alt="circle" width="25" height="25"
-            class="o" />
-        <h1>Tic Tac Toe Game</h1>
+            class="o" /> -->
+        <h1>GAMES By PJM</h1>
+    </div>
+    <nav>
+        <ul>
+            <li class="game-name">Tic-Tac-Toe</li>
+            <li></li>
+        </ul>
+    </nav>
+    <p id="fun-msg">"Step into the ultimate mind showdown where every move counts! Challenge your strategic skills and outsmart your opponent in the timeless game of Tic Tac Toe."</p>
+    <div class="info">
         <p id="msg"></p>
         <p id="score"></p>
     </div>
-    <form>
+    <form class="name-form">
         <input type="text" placeholder="Player1 Name" name="P1name" id="P1name">
         <input type="text" placeholder="Player2 Name" name="P2name" id="P2name">
         <button type="button" onclick="getRandomTurn();" id="strt-btn">START</button>
