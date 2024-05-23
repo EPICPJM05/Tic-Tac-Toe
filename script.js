@@ -83,6 +83,8 @@ function putMark(a) {
         } else if (moveCount >= 9) {
             setTimeout(() => {
                 alert("It's a Draw !!");
+                scoreCard();
+                playAgain();
             }, 1000);
         }
     } else {
