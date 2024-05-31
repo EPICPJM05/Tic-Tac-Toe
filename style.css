@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -83,8 +85,8 @@ ul{
 }
 
 .place{
-    font-size: 65px;
-    font-family:cursive;
+    font-size: 75px;
+    font-family:"Poetsen One",cursive;
     font-weight: bolder;
     color: white;
     display: flex;
