@@ -4,8 +4,7 @@ document.getElementById('score').style.display = 'none';
 var P1mark, P2mark, msg , P1score=0, P2score=0;
 const p1 = document.getElementById("P1name");
 const p2 = document.getElementById("P2name");
-// Plyr1 = {mark, score};
-// Plyr2 = {mark, score};
+
 var first;
 function getRandomTurn() {
     if (p1.value == "" || p2.value == "") {

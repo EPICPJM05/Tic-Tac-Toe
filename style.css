@@ -20,10 +20,27 @@ body{
 }
 .game-name{
     padding: 10px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;    
+    color: rgb(25, 25, 25);
     font-size: large;
     font-weight: bolder;
+}
+.choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.game-button{
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(250, 213, 162),rgb(254, 167, 60));
+    padding: 12px 20px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    color: aliceblue;
+    font-weight: 600;
 }
 /* nav bar */
 nav{
