@@ -47,8 +47,8 @@ var p;
 function putMark(a) {
     var status = document.getElementById("plStatus")
     if (winner == null) {
-        var stsP1 = first + "'s turn";
-        var stsP2 = second + "'s turn";
+        var stsP1 = p1.value + "'s turn";
+        var stsP2 = p2.value + "'s turn";
         if (moveCount % 2 == 0) {
             if (locked.includes(a)) {
                 alert("Already Filled")
